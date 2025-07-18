@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Free Consultation | Careernest</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-blue-50 text-gray-800">
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-4">
+          Book a Free Consultation
+        </h2>
+        <p class="text-center text-gray-600 mb-10">
+          We’re excited to help you shape your career. Fill out the form below
+          and we’ll be in touch!
+        </p>
+
+        <form
+          action="https://formspree.io/f/xldldlbk"
+          method="POST"
+          class="bg-white p-10 rounded-3xl shadow-xl space-y-6"
+          
+        >
+            
+          <!-- 🔁 This line ensures redirection after form submission -->
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html" />
+            <input type="hidden" name="_subject" value="New Consultation Request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <p class="text-gray-500 mb-4">
+                We’ll get back to you within 24 hours to schedule your consultation.
+            </p>
+
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="name"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full border border-gray-300 rounded-xl pl-4 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="email"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                class="w-full border border-gray-300 rounded-xl pl-4 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="service"
+              >Interested In</label
+            >
+            <select
+              id="service"
+              name="service"
+              required
+              class="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select a service</option>
+              <option>Resume Building</option>
+              <option>Interview Preparation</option>
+              <option>Career Counseling</option>
+              <option>Upskilling Programs</option>
+              <option>Job Referrals & Alerts</option>
+              <option>LinkedIn Profile Optimization</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="message"
+              >Your Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Tell us how we can help you..."
+              class="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-700 hover:bg-blue-800 transition text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl"
+          >
+            ✉️ Submit Request
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
