@@ -24,17 +24,22 @@
           action="https://formspree.io/f/xldldlbk"
           method="POST"
           class="bg-white p-10 rounded-3xl shadow-xl space-y-6"
-          
         >
-            
           <!-- 🔁 This line ensures redirection after form submission -->
-<input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html" />
-            <input type="hidden" name="_subject" value="New Consultation Request" />
-            <input type="hidden" name="_captcha" value="false" />
-            <p class="text-gray-500 mb-4">
-                We’ll get back to you within 24 hours to schedule your consultation.
-            </p>
-
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5500/thank-you.html"
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Consultation Request"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <p class="text-gray-500 mb-4">
+            We’ll get back to you within 24 hours to schedule your consultation.
+          </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -99,14 +104,41 @@
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-blue-700 hover:bg-blue-800 transition text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl"
+          <a
+            href="thank-you.html"
+            class="block text-center w-full bg-blue-700 hover:bg-blue-800 transition text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl"
           >
             ✉️ Submit Request
-          </button>
+          </a>
         </form>
       </div>
     </section>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((nav) =>
+              nav.classList.remove("text-blue-700", "font-semibold")
+            );
+            this.classList.add("text-blue-700", "font-semibold");
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const consultationButton = document.querySelector(".bg-blue-700");
+        consultationButton.addEventListener("click", function () {
+          alert(
+            "Thank you for booking a consultation! We will contact you shortly."
+          );
+        });
+      });
+    </script>
   </body>
 </html>
